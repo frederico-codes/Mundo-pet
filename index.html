@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Mundo pet</title>
+</head>
+<body>
+  <div class="container">
+    <div id="brand">
+      <img src="src/assets/Dog-Duotone--Streamline-Phosphor.png" alt="Cachorro">
+      <span id="text-brand">Mundo pet</span>
+    </div>
+    <main class="schedule">
+      <header>
+        <div id="title">
+          <h1>Sua agenda</h1>
+          <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+        </div>
+        <div class="input">
+          <i><img src="./src/assets/calendario.png" alt="Calendário" /></i>
+          <input type="date" id="date" name="date" required />
+        </div>
+      </header>
+
+      <div class="sections">
+        <section class="schedule-period">
+          <header>
+            <div class="period-header">
+              <img src="./src/assets/morning.png" alt="Manhã" />
+              <strong>Manhã</strong>
+            </div>
+            <span>09h-12h</span>
+          </header>
+          <ul id="period-morning" class="period">
+            <!-- Exemplo --> 
+            <li>
+              <div class="first-line">
+                <strong>09:00</strong>
+                <span class="pet-name">Thor</span><span class="owner-name">/ Fernanda Costa</span>
+              </div>
+              <span class="service">Vacinação</span>
+              <span class="remove">Remover agendamento</span>         
+            </li>
+          </ul>
+        </section>
+
+        <section class="schedule-period">
+          <header>
+            <div class="period-header">
+              <img src="./src/assets/afternoon.png" alt="Manhã" />
+              <strong>Manhã</strong>
+            </div>
+            <span>09h-12h</span>
+          </header>
+          <ul id="period-morning" class="period">
+            <!-- Exemplo --> 
+            <li>
+              <div class="first-line">
+                <strong>09:00</strong>
+                <span class="pet-name">Thor</span><span class="owner-name">/ Fernanda Costa</span>
+              </div>
+              <span class="service">Vacinação</span>
+              <span class="remove">Remover agendamento</span>         
+            </li>
+          </ul>
+        </section>
+        
+        <section class="schedule-period">
+          <header>
+            <div class="period-header">
+              <img src="./src/assets/night.png" alt="Manhã" />
+              <strong>Manhã</strong>
+            </div>
+            <span>09h-12h</span>
+          </header>
+          <ul id="period-morning" class="period">
+            <!-- Exemplo --> 
+            <li>
+              <div class="first-line">
+                <strong>09:00</strong>
+                <span class="pet-name">Thor</span><span class="owner-name">/ Fernanda Costa</span>
+              </div>
+              <span class="service">Vacinação</span>
+              <span class="remove">Remover agendamento</span>         
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </div>
+  
+</body>
+</html>

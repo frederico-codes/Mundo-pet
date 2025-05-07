@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-family: "Inter", sans-serif;
+  font-size:16px;
+}
+body {
+  background: #14151D;
+  color:#FFF;
+}
+.container{ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#brand{
+  width: 160px;
+  height: 48px;  
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 0px 0px 12px 0px;
+  background: #2E2C30;
+  margin-bottom: 10px;  
+}
+#brand img{
+  margin-right: 4px;
+}
+#text-brand{
+  color: #9282FA;
+  font-family: "Familjen Grotesk",sans-serif;
+  font-size: 16px;  
+  font-weight: 700;
+  line-height: 24px; 
+  text-transform: uppercase;
+}
+
+#title > h1{
+  color: #F5F4F5; 
+  font-family: "Inter Tight",sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+#title p{
+  color: #98959D;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px; 
+}
+
+.input {
+  width: 183px;
+  height: 48px;
+
+  border: 1px solid #3e3c41;
+  padding:12px;
+  border-radius: 0.5rem;
+
+  display: flex;
+  margin-top: 12px;
+  margin-bottom: 32px;
+}
+
+.input i {
+  margin-right: 0.5rem;
+}
+
+.input input {
+  flex: 1;
+
+  font-family: "Catamaran", sans-serif;
+
+  font-size: 1rem;
+  color: #b2afb6;
+  background-color: transparent;
+
+  outline: none;
+  border: none;
+}
+
+.input:focus-within {
+  border: 1.5px solid #9282FA;
+}
+::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  background: url("./src/assets/arrow-down.svg") no-repeat;
+}
+main{
+  width: 390px;
+  border:1px solid ;
+  padding: 12px 20px;
+}
+main > header{
+  margin-bottom: 32px;
+}
+.period-header{
+  display: flex;
+  align-items: center;
+}
+.period-header > img {
+  margin-right: 12px;
+} 
+li{  
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding: 12px;
+}
+strong{
+  margin-right: 12px;
+}
+.service{
+  color: #98959D;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px; 
+}
+#period-morning > li .owner-name{
+  color:  #98959D; 
+  font-family: Inter;
+  font-size: 12px; 
+  font-weight: 400;
+  line-height: 16px;
+}
+.schedule-period > header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid #2E2C30;
+}
+
+.sections{ 
+  width: 100%; 
+  display: flex;
+  flex-direction: column;
+  gap:12px;
+ 
+}
+section{
+  background-color:#353339;
+  border-radius: 8px;
+}
+#period-morning{
+padding: 20px;
+}
+.first-line{
+  display: flex;
+  align-items: center;
+}
+.remove{
+  display: flex;
+  justify-content: end;
+  color: #666;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px; 
+}
