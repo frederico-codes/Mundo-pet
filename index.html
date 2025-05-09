@@ -12,7 +12,7 @@
 <body>
   <div class="container">
     <div id="brand">
-      <img src="src/assets/Dog-Duotone--Streamline-Phosphor.png" alt="Cachorro">
+      <img src="src/assets/dog.png" alt="Cachorro">
       <span id="text-brand">Mundo pet</span>
     </div>
     <main class="schedule">
@@ -69,7 +69,7 @@
             </li>
           </ul>
         </section>
-        
+
         <section class="schedule-period">
           <header>
             <div class="period-header">
@@ -91,8 +91,71 @@
           </ul>
         </section>
       </div>
-    </main>
+    </main>    
+    <div class="new-schedule">
+      <button>NOVO AGENDAMENTO</button>
+    </div>
   </div>
   
+  <!-- modal -->
+  <div class="modal-wrapper" >
+
+    <div class="modal-form">
+      <header id="modal-header">
+        <h1>Agende um atendimento</h1>
+        <p>Preencha os dados do cliente para realizar o agendamento:</p>
+      </header>
+          
+      <form>
+        <label for="tutor-name">Nome do tutor</label>
+        <div class="input">
+          <i><img src="./src/assets/tutor.png" alt="Tutor" /></i>
+          <input type="text" id="tutor-name" name="date" value="Helena Souza" required />
+        </div>
+
+        <label for="pet-name">Nome do pet</label>
+        <div class="input">
+          <i><img src="./src/assets/pet.png" alt="Pet" /></i>
+          <input type="text" id="pet-name" name="pet-name" value="Cheddar" required />
+        </div>
+
+        <label for="tel">Telefone</label>
+        <div class="input">
+          <i><img src="./src/assets/phone.png" alt="Tel" /></i>
+          <input type="tel" id="tel" name="tel" value="(00) 0 0000-0000" required />
+        </div>
+
+        <label for="service-description">Descrição do serviço</label>
+        <div>
+          <textarea name="service-description" id="service-description" placeholder="Banho e tosa"></textarea>
+        </div>
+
+        <div id="flex">
+          <div class="flex-1">
+            <label for="date">Data</label>
+            <div class="input">
+              <i><img src="./src/assets/calendario.png" alt="Calendário" /></i>
+              <input type="date" id="date" name="date" required />
+            </div>
+          </div>
+          <div class="flex-1">
+            <label for="time">Hora</label>
+            <div class="input">
+              <i><img src="./src/assets/clock.png" alt="Time" /></i>
+              <input type="time" id="time" name="time" value="12:00" />
+            </div>
+          </div>
+        </div>
+       
+        <div id="wrapper-button">
+          <button id="schedule-button">AGENDAR</button>
+        </div>
+        
+      </form>
+     
+        <img src="src/assets/close.png" alt="x de close" id="close">
+      
+    </div>
+  </div> 
 </body>
 </html>
