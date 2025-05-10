@@ -1,0 +1,12 @@
+{
+  "schedules": [
+    {
+      "id": 1,
+      "name": "Helena Souza",
+      "pet": "Cheddar",
+      "service": "Banho e tosa",
+      "date": "2024-01-10",
+      "time": "12:00"
+    }
+  ]
+}
