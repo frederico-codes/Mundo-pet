@@ -1,7 +1,6 @@
 "use strict"
 
-
-
+import "./libs/dayjs.js"
 import "./style.css"
 
 
