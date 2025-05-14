@@ -8,7 +8,7 @@ const tutorName = document.getElementById("tutor-name")
 const petName = document.getElementById("pet-name")
 const telNumber = document.getElementById("tel")
 const serviceDescription = document.getElementById("service-description")
-const selectedDate = document.getElementById("date")
+const selectedDate = document.getElementById("form-date")
 const selectedHour = document.getElementById("time")
 
 const inputToday = dayjs(new Date()).format("YYYY-MM-DD")
@@ -20,11 +20,6 @@ selectedDate.min = inputToday
  
 //   selectedHour.value = inputTime
 //   selectedHour.min = inputTime
-
-
-
-
-
 
 
 form.onsubmit = async (event) => {
@@ -45,15 +40,17 @@ form.onsubmit = async (event) => {
       return alert("Informe o nome do pet!")
     }
     if(!tel){
-      return alert("Informe o nome do telefone!")
+      return alert("Informe o número do telefone!")
     }
     if(!service){
-      return alert("Informe o nome do service!")
+      return alert("Informe o nome do serviço!")
+    } 
+    if(!selectedHourValue){
+      return alert("Informe a hora!")
     } 
 
-
    
- const when = dayjs(`${selectedDate.value}T${selectedHourValue}`).format()
+    const when = dayjs(`${selectedDate.value}T${selectedHourValue}`).format()
 
 
     const id = new Date().getTime()
@@ -65,6 +62,8 @@ form.onsubmit = async (event) => {
       service,
       when,
     })
+    const selectedDate = document.getElementById("schedule-date")
+    selectedDate =dayjs(date).add(scheduleHour, "hour").isBefore(dayjs()) 
    
     await schedulesDay()
 
