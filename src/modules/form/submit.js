@@ -62,8 +62,7 @@ form.onsubmit = async (event) => {
       service,
       when,
     })
-    const selectedDate = document.getElementById("schedule-date")
-    selectedDate =dayjs(date).add(scheduleHour, "hour").isBefore(dayjs()) 
+ 
    
     await schedulesDay()
 

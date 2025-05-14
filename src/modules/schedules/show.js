@@ -55,6 +55,8 @@ export function schedulesShow({ dailySchedules }){
         periodNight.appendChild(item)
       }
     })
+
+     
     
   } catch (error) {
     alert("Não foi possível exibir os agendamentos")

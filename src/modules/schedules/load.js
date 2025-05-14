@@ -5,12 +5,10 @@ import { schedulesShow } from "../schedules/show.js"
 
 
 const selectedScheduleDate = document.getElementById("schedule-date")
-selectedScheduleDate.value = inputToday
-selectedScheduleDate.min = inputToday
 
 export async function schedulesDay(){
 
-  const date = inputToday
+  const date = selectedScheduleDate.value
 
   const dailySchedules = await scheduleFechByDay({ date })
   
@@ -18,5 +16,5 @@ export async function schedulesDay(){
   
   // hoursLoad({ date,dailySchedules })
 } 
-const inputToday = dayjs(new Date()).format("YYYY-MM-DD")
+
 
