@@ -23,7 +23,7 @@
         </div>
         <div class="input">
           <i><img src="./src/assets/calendario.png" alt="Calendário" /></i>
-          <input type="date" id="date" name="date" required />
+          <input type="date" id="schedule-date" name="date" required />
         </div>
       </header>
 
@@ -37,15 +37,16 @@
             <span>09h-12h</span>
           </header>
           <ul id="period-morning" class="period">
-            <!-- Exemplo --> 
+            <!-- Exemplo 
             <li>
               <div class="first-line">
                 <strong>09:00</strong>
-                <span class="pet-name">Thor</span><span class="owner-name">/ Fernanda Costa</span>
+                <span class="pet-name">Thor</span>
+                <span class="owner-name">/ Fernanda Costa</span>
               </div>
               <span class="service">Vacinação</span>
               <span class="remove">Remover agendamento</span>         
-            </li>
+            </li>--> 
           </ul>
         </section>
 
@@ -58,7 +59,7 @@
             <span>13h-18h</span>
           </header>
           <ul id="period-afternoon" class="period">
-            <!-- Exemplo --> 
+            <!-- Exemplo 
             <li>
               <div class="first-line">
                 <strong>13:00</strong>
@@ -66,7 +67,7 @@
               </div>
               <span class="service">Corte de Unhas</span>
               <span class="remove">Remover agendamento</span>         
-            </li>
+            </li>--> 
           </ul>
         </section>
 
@@ -79,7 +80,7 @@
             <span>19h-21h</span>
           </header>
           <ul id="period-night" class="period">
-            <!-- Exemplo --> 
+            <!-- Exemplo 
             <li>
               <div class="first-line">
                 <strong>20:00</strong>
@@ -87,7 +88,7 @@
               </div>
               <span class="service">Limpeza de Dentes</span>
               <span class="remove">Remover agendamento</span>         
-            </li>
+            </li> -->
           </ul>
         </section>
       </div>
@@ -110,19 +111,19 @@
         <label for="tutor-name">Nome do tutor</label>
         <div class="input">
           <i><img src="./src/assets/tutor.png" alt="Tutor" /></i>
-          <input type="text" id="tutor-name" name="date" value="Helena Souza" required />
+          <input type="text" id="tutor-name" name="date"  required />
         </div>
 
         <label for="pet-name">Nome do pet</label>
         <div class="input">
           <i><img src="./src/assets/pet.png" alt="Pet" /></i>
-          <input type="text" id="pet-name" name="pet-name" value="Cheddar" required />
+          <input type="text" id="pet-name" name="pet-name"  required />
         </div>
 
         <label for="tel">Telefone</label>
         <div class="input">
           <i><img src="./src/assets/phone.png" alt="Tel" /></i>
-          <input type="tel" id="tel" name="tel" value="(00) 0 0000-0000" required />
+          <input type="tel" id="tel" name="tel" required />
         </div>
 
         <label for="service-description">Descrição do serviço</label>
@@ -138,12 +139,27 @@
               <input type="date" id="date" name="date" required />
             </div>
           </div>
-          <div class="flex-1">
+          <div class="flex-1">            
             <label for="time">Hora</label>
             <div class="input">
-              <i><img src="./src/assets/clock.png" alt="Time" /></i>
-              <input type="time" id="time" name="time" value="12:00" />
-            </div>
+              <i><img src="./src/assets/clock.png" alt="Relógio" /></i>
+              <select id="time" name="time" required>
+                <option value="" disabled selected>Selecione</option>
+                <option value="09:00">09:00</option>
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="12:00">12:00</option>
+                <option value="13:00">13:00</option>
+                <option value="14:00">14:00</option>
+                <option value="15:00">15:00</option>
+                <option value="16:00">16:00</option>
+                <option value="17:00">17:00</option>
+                <option value="18:00">18:00</option>
+                <option value="19:00">19:00</option>
+                <option value="20:00">20:00</option>
+                <option value="21:00">21:00</option>
+              </select>
+            </div>            
           </div>
         </div>
        
@@ -156,7 +172,7 @@
       
     </div>
   </div>
-  <script src="src/js/modal.js" type="module" defer></script>
+
 
 </body>
 </html>
