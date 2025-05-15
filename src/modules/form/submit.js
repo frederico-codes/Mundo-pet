@@ -15,6 +15,12 @@ const inputToday = dayjs(new Date()).format("YYYY-MM-DD")
 
 selectedDate.value = inputToday
 selectedDate.min = inputToday
+const scheduleDate = document.getElementById("schedule-date")
+
+
+const today = dayjs().format("YYYY-MM-DD")
+scheduleDate.value = today
+scheduleDate.min = today
 
 
  
