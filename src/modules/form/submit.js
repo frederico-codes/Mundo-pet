@@ -37,6 +37,7 @@ form.onsubmit = async (event) => {
     const pet = petName.value.trim()
     const tel = telNumber.value.trim()
     const service = serviceDescription.value.trim()
+    const selectedDateValue = selectedDate.value
     const selectedHourValue = selectedHour.value
 
     if(!tutor){
@@ -56,7 +57,7 @@ form.onsubmit = async (event) => {
     } 
 
    
-    const when = dayjs(`${selectedDate.value}T${selectedHourValue}`).format()
+    const when = dayjs(`${selectedDateValue}T${selectedHourValue}`).format()
 
 
     const id = new Date().getTime()
@@ -68,7 +69,8 @@ form.onsubmit = async (event) => {
       service,
       when,
     })
- 
+    
+  
    
     await schedulesDay()
 
@@ -79,6 +81,8 @@ form.onsubmit = async (event) => {
     selectedDate.value = dayjs(new Date()).format("YYYY-MM-DD")
     selectedHour.value = ""
 
+
+
   } catch (error) {
     alert("Não foi possível realizar o agendamento.")
     console.log(error)
@@ -86,3 +90,5 @@ form.onsubmit = async (event) => {
 
  
 }
+
+
