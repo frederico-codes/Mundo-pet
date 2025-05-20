@@ -23,11 +23,6 @@ scheduleDate.value = today
 scheduleDate.min = today
 
 
- 
-//   selectedHour.value = inputTime
-//   selectedHour.min = inputTime
-
-
 form.onsubmit = async (event) => {
   event.preventDefault()
 
@@ -91,4 +86,26 @@ form.onsubmit = async (event) => {
  
 }
 
+function updateAvailableHours() {
+  const selected = selectedDate.value
+  const now = dayjs()
+  const isToday = selected === now.format("YYYY-MM-DD")
 
+  Array.from(selectedHour.options).forEach(option => {
+    if (!option.value) return;
+
+    const optionTime = dayjs(`${selected}T${option.value}`);
+    const isUnavailable = isToday && optionTime.isBefore(now);
+
+    option.disabled = isUnavailable;
+
+    if (isUnavailable) {
+      option.textContent = `${option.value} (indisponível)`;
+    } else {
+      option.textContent = option.value;
+    }
+  });
+}
+
+updateAvailableHours()
+selectedDate.addEventListener("change", updateAvailableHours)

@@ -80,11 +80,8 @@ body {
   outline: none;
   border: none;
 }
-select{
-  width: 100%;
-  background-color: transparent;
-  color: #FFF;
-}
+
+
 option{
   color:black ;
 }
@@ -95,14 +92,7 @@ option{
   cursor: pointer;
   background: url("./assets/arrow-down.svg") no-repeat;
 }
-input[type="time"] {
-  appearance: none;
-  -webkit-appearance: none;
-  background: url('./assets/clock.png') no-repeat right center;
-  background-size: 1.5rem;
-  padding-right: .01rem;
-  cursor: pointer;
-}
+
 main{ 
   margin-top: 21px; 
   padding: 12px 20px;  
@@ -220,7 +210,20 @@ button{
   visibility: hidden;
   padding-top: 180px;
 }
-
+select{
+  font-size: 1rem;
+  background-color: transparent;
+  color: #FFF;
+  flex: 1;
+  background: url("./assets/arrow-down.svg") no-repeat;
+  background-position: calc(100% - .23rem) center;
+  background-size: 1.3rem;
+  padding-right: 2rem; 
+  cursor: pointer;
+  outline: none;
+  border: none;
+  appearance: none; 
+}
 .modal-form{
   width: 350px;
   position: relative;
@@ -261,7 +264,18 @@ form .input {
   border-radius: 0.5rem;
   display: flex;
 }
-form textarea {
+input[type="time"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background: url('./assets/clock.png') no-repeat right center;
+  background-size: 1.5rem;
+  padding-right: .01rem;
+  cursor: pointer;
+}
+.textarea:focus-within {
+  border: 1.5px solid #9282FA;
+}
+textarea {
   width:310px;
   height: 80px; 
   font-size: 1rem;
@@ -269,7 +283,14 @@ form textarea {
   background-color: transparent;
   border-radius: 0.5rem;
   border: 1px solid #3e3c41;
-  padding: 12px;
+  padding: 12px; 
+  outline: 0;
+
+}
+
+
+textarea:focus{
+  border: 1.5px solid #9282FA;
 }
 #modal-header{ 
   padding: 12px 20px; 
@@ -313,6 +334,8 @@ form textarea {
   opacity: 1;
   visibility: visible;
 }
+
+
 
 
 @media (min-width: 1100px) {
@@ -364,6 +387,10 @@ form textarea {
   #flex .flex-1 .input{
     width:191px;
   }
+  select{ 
+  background-position: calc(100% - 2rem) center;
+
+}
   #time{
     width:191px;
   }
