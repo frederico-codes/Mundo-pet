@@ -26,7 +26,6 @@
           <input type="date" id="schedule-date" name="date" required />
         </div>
       </header>
-
       <div class="sections">
         <section class="schedule-period">
           <header>
@@ -50,7 +49,7 @@
             </li>--> 
           </ul>
         </section>
-
+        
         <section class="schedule-period">
           <header>
             <div class="period-header">
@@ -66,8 +65,8 @@
                 <strong>13:00</strong>
                 <span class="pet-name">Mel</span><span class="owner-name">/ / João Souza</span>
               </div>
-              <span class="service">Corte de Unhas</span>
-              <span class="remove">Remover agendamento</span>         
+                <span class="service">Corte de Unhas</span>
+                <span class="remove">Remover agendamento</span>         
             </li>--> 
           </ul>
         </section>
@@ -83,12 +82,12 @@
           <ul id="period-night" class="period">
             <!-- Exemplo 
             <li>
-              <div class="first-line">
-                <strong>20:00</strong>
-                <span class="pet-name">Max</span><span class="owner-name">/ / Camila Santos</span>
-              </div>
-              <span class="service">Limpeza de Dentes</span>
-              <span class="remove">Remover agendamento</span>         
+                <div class="first-line">
+                  <strong>20:00</strong>
+                  <span class="pet-name">Max</span><span class="owner-name">/ / Camila Santos</span>
+                </div>
+                <span class="service">Limpeza de Dentes</span>
+                <span class="remove">Remover agendamento</span>         
             </li> -->
           </ul>
         </section>
@@ -101,37 +100,31 @@
   
   <!-- modal -->
   <div class="modal-wrapper" >
-
     <div class="modal-form">
       <header id="modal-header">
         <h1>Agende um atendimento</h1>
         <p>Preencha os dados do cliente para realizar o agendamento:</p>
-      </header>
-          
+      </header>          
       <form autocomplete="off" >
         <label for="tutor-name">Nome do tutor</label>
         <div class="input">
           <i><img src="./src/assets/tutor.png" alt="Tutor" /></i>
           <input type="text" id="tutor-name" name="date"  required />
         </div>
-
         <label for="pet-name">Nome do pet</label>
         <div class="input">
           <i><img src="./src/assets/pet.png" alt="Pet" /></i>
           <input type="text" id="pet-name" name="pet-name"  required />
         </div>
-
         <label for="tel">Telefone</label>
         <div class="input">
           <i><img src="./src/assets/phone.png" alt="Tel" /></i>
           <input type="tel" id="tel" name="tel" required />
         </div>
-
         <label for="service-description">Descrição do serviço</label>
         <div class="textarea">
           <textarea name="service-description" id="service-description" placeholder="Banho e tosa"></textarea>
         </div>
-
         <div id="flex">
           <div class="flex-1">
             <label for="form-date">Data</label>
@@ -139,8 +132,7 @@
               <i><img src="./src/assets/calendario.png" alt="Calendário" /></i>
               <input type="date" id="form-date" name="date" required />
             </div>
-          </div>
-          
+          </div>          
           <div class="flex-1">            
             <label for="time">Hora</label>
             <div class="input">
@@ -163,18 +155,14 @@
               </select>
             </div>            
           </div>
-        </div>
-       
+        </div>       
         <div id="wrapper-button">
           <button id="schedule-button">AGENDAR</button>
         </div>        
       </form>
            
-      <img src="src/assets/close.png" alt="x de close" id="close" class="close">
-      
+      <img src="src/assets/close.png" alt="x de close" id="close" class="close">      
     </div>
   </div>
-
-
 </body>
 </html>

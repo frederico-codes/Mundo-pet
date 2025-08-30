@@ -6,7 +6,7 @@ export async function scheduleNew({id,tutor,pet,tel,service,when}) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-      },
+    },
       body: JSON.stringify({ id, tutor,pet,tel,service,when }),
     })
     
@@ -14,8 +14,7 @@ export async function scheduleNew({id,tutor,pet,tel,service,when}) {
    
   } catch (error) {
     console.log(error)
-    alert("Não foi possível agendar. Tente novamente mais tarde.")
-    
+    alert("Não foi possível agendar. Tente novamente mais tarde.")    
   }
 }
 

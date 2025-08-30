@@ -26,21 +26,15 @@ const scheduleDate = document.getElementById("schedule-date")
 scheduleDate.value = inputToday
 scheduleDate.min = inputToday
 
-
 async function updateAvailableHours() {
   const selected = selectedDate.value;      
   const now = dayjs();
-  const isToday = selected === now.format("YYYY-MM-DD");
-
-  
+  const isToday = selected === now.format("YYYY-MM-DD");  
   const daily = await scheduleFechByDay({ date: selected }); 
-  
-
   
   const booked = new Set(
     daily.map(item => dayjs(item.when).format("HH:mm"))
   );
-
   
   Array.from(selectedHour.options).forEach(option => {
     if (!option.value) return; 
@@ -48,18 +42,14 @@ async function updateAvailableHours() {
     const optionTime = dayjs(`${selected}T${option.value}`);
     const isPast   = isToday && optionTime.isBefore(now);
     const isBooked = booked.has(option.value);
-
     const disable = isPast || isBooked;
-
     option.disabled = disable;
       
   });
 }
 
-
 selectedDate.addEventListener("change", updateAvailableHours)
 updateAvailableHours() // Executa uma vez ao carregar
-
 
 form.onsubmit = async (event) => {
   event.preventDefault()
@@ -86,11 +76,9 @@ form.onsubmit = async (event) => {
     } 
     if(!selectedHourValue){
       return alert("Informe a hora!")
-    } 
-
+    }
    
     const when = dayjs(`${selectedDateValue}T${selectedHourValue}`).format()
-
 
     const id = new Date().getTime()
 
@@ -101,8 +89,7 @@ form.onsubmit = async (event) => {
       tel,
       service,
       when,
-    })
-    
+    }) 
   
    
     await schedulesDay()
