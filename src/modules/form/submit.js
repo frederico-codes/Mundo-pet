@@ -11,23 +11,50 @@ const serviceDescription = document.getElementById("service-description")
 const selectedDate = document.getElementById("form-date")
 const selectedHour = document.getElementById("time")
 
+telNumber.oninput = () => {
+  let value = telNumber.value.replace(/\D/g, "")
+  telNumber.value = value
+   
+}
+
 const inputToday = dayjs(new Date()).format("YYYY-MM-DD")
 
 selectedDate.value = inputToday
 selectedDate.min = inputToday
+
 const scheduleDate = document.getElementById("schedule-date")
+scheduleDate.value = inputToday
+scheduleDate.min = inputToday
 
 
-const today = dayjs().format("YYYY-MM-DD")
-scheduleDate.value = today
-scheduleDate.min = today
+function updateAvailableHours() {
+  const selected = selectedDate.value
+  const now = dayjs()
+
+  const isToday = selected === now.format("YYYY-MM-DD")
+
+Array.from(selectedHour.options).forEach(option => {
+  if (!option.value) return;
+
+  const optionTime = dayjs(`${selected}T${option.value}`);
+  const isUnavailable = isToday && optionTime.isBefore(now);
+
+  option.disabled = isUnavailable;
+
+  option.textContent = isUnavailable
+    ? `${option.value} (indisponível)`
+    : option.value
+  })
+}
+
+selectedDate.addEventListener("change", updateAvailableHours)
+updateAvailableHours() // Executa uma vez ao carregar
 
 
 form.onsubmit = async (event) => {
   event.preventDefault()
 
-  try {
-    
+  try {    
     const tutor = tutorName.value.trim()
     const pet = petName.value.trim()
     const tel = telNumber.value.trim()
@@ -61,6 +88,7 @@ form.onsubmit = async (event) => {
       id,
       tutor,
       pet,
+      tel,
       service,
       when,
     })
@@ -73,10 +101,12 @@ form.onsubmit = async (event) => {
     petName.value = ""
     telNumber.value = ""
     serviceDescription.value = ""
-    selectedDate.value = dayjs(new Date()).format("YYYY-MM-DD")
+    selectedDate.value = inputToday
     selectedHour.value = ""
+    tutorName.focus()
 
-
+    updateAvailableHours()
+    
 
   } catch (error) {
     alert("Não foi possível realizar o agendamento.")
@@ -86,26 +116,5 @@ form.onsubmit = async (event) => {
  
 }
 
-function updateAvailableHours() {
-  const selected = selectedDate.value
-  const now = dayjs()
-  const isToday = selected === now.format("YYYY-MM-DD")
 
-  Array.from(selectedHour.options).forEach(option => {
-    if (!option.value) return;
 
-    const optionTime = dayjs(`${selected}T${option.value}`);
-    const isUnavailable = isToday && optionTime.isBefore(now);
-
-    option.disabled = isUnavailable;
-
-    if (isUnavailable) {
-      option.textContent = `${option.value} (indisponível)`;
-    } else {
-      option.textContent = option.value;
-    }
-  });
-}
-
-updateAvailableHours()
-selectedDate.addEventListener("change", updateAvailableHours)
