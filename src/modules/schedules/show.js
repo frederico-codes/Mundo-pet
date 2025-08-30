@@ -25,12 +25,16 @@ export function schedulesShow({ dailySchedules }){
       const petName = document.createElement("span")
       petName.classList.add("pet-name")
       petName.textContent =  schedule.pet
+
+      const slash = document.createElement("span")
+      slash .classList.add("slash")
+      slash .textContent =  " / "
       
       const ownerName = document.createElement("span")
       ownerName.classList.add("owner-name")
       ownerName.textContent =  schedule.tutor
       
-      firstLine.append(time, petName, ownerName)
+     firstLine.append(time, petName, slash, ownerName)
       
       const service = document.createElement("span")
       service.classList.add("service")

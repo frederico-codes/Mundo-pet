@@ -342,6 +342,13 @@ select option:disabled {
   cursor: not-allowed;
 }
 
+.slash {
+  margin: 0 4px;
+  color: #98959D; /* cinza igual ao dono */
+}
+
+
+
 
 
 @media (min-width: 1100px) {
