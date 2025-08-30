@@ -337,6 +337,10 @@ textarea:focus{
   visibility: visible;
 }
 
+select option:disabled {  
+  color: #9aa0a6;   
+  cursor: not-allowed;
+}
 
 
 

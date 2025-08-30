@@ -1,28 +1,30 @@
-export const Modal = {
-  wrapper:document.querySelector('.modal-wrapper'),
-  // message:document.querySelector('.modal .title span'),
-  buttonClose:document.querySelector('.modal-form img.close'),
-  buttonOpen:document.querySelector('.container .new-schedule button'),
-  open(){
-      Modal.wrapper.classList.add('open')
-  },
-  close(){
-      Modal.wrapper.classList.remove('open')
-  }  
-}
-  
-Modal.buttonClose.onclick = () => {
-  Modal.close();    
-}
+// Seleciona elementos do modal
+const modalWrapper = document.querySelector(".modal-wrapper");
+const modalForm = document.querySelector(".modal-form");
+const openButton = document.querySelector(".new-schedule button"); // botão "NOVO AGENDAMENTO"
+const closeButton = document.getElementById("close"); // botão X dentro do modal
 
-Modal.buttonOpen.onclick = () => { 
-  Modal.open();    
-} 
+// Abre o modal ao clicar no botão
+openButton.addEventListener("click", () => {
+  modalWrapper.classList.add("open");
+});
 
-window.addEventListener('keydown',handleKeydown)
- 
-function handleKeydown(){  
-  if(event.key === 'Escape'){
-      Modal.close();
+// Fecha ao clicar no botão de fechar (X)
+closeButton.addEventListener("click", () => {
+  modalWrapper.classList.remove("open");
+});
+
+// Fecha ao clicar fora do formulário (no fundo escuro)
+modalWrapper.addEventListener("click", (event) => {
+  if (event.target === modalWrapper) {
+    modalWrapper.classList.remove("open");
   }
-}
+});
+
+
+// Fecha modal com tecla ESC
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    modalWrapper.classList.remove("open");
+  }
+});

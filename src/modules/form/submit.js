@@ -1,5 +1,5 @@
 import dayjs from "dayjs"
-
+import { scheduleFechByDay } from "../../services/schedule-fetch-by-day.js";
 import { scheduleNew } from "../../services/schedule-new.js"
 import {schedulesDay} from "../schedules/load.js" 
 
@@ -27,25 +27,35 @@ scheduleDate.value = inputToday
 scheduleDate.min = inputToday
 
 
-function updateAvailableHours() {
-  const selected = selectedDate.value
-  const now = dayjs()
+async function updateAvailableHours() {
+  const selected = selectedDate.value;      
+  const now = dayjs();
+  const isToday = selected === now.format("YYYY-MM-DD");
 
-  const isToday = selected === now.format("YYYY-MM-DD")
+  
+  const daily = await scheduleFechByDay({ date: selected }); 
+  
 
-Array.from(selectedHour.options).forEach(option => {
-  if (!option.value) return;
+  
+  const booked = new Set(
+    daily.map(item => dayjs(item.when).format("HH:mm"))
+  );
 
-  const optionTime = dayjs(`${selected}T${option.value}`);
-  const isUnavailable = isToday && optionTime.isBefore(now);
+  
+  Array.from(selectedHour.options).forEach(option => {
+    if (!option.value) return; 
 
-  option.disabled = isUnavailable;
+    const optionTime = dayjs(`${selected}T${option.value}`);
+    const isPast   = isToday && optionTime.isBefore(now);
+    const isBooked = booked.has(option.value);
 
-  option.textContent = isUnavailable
-    ? `${option.value} (indisponível)`
-    : option.value
-  })
+    const disable = isPast || isBooked;
+
+    option.disabled = disable;
+      
+  });
 }
+
 
 selectedDate.addEventListener("change", updateAvailableHours)
 updateAvailableHours() // Executa uma vez ao carregar
