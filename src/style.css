@@ -6,7 +6,7 @@
 
 :root {
   font-family: "Inter", sans-serif;
-  font-size:16px;
+  font-size:62.5%;
 }
 
 body {
@@ -19,19 +19,19 @@ body {
 }
 
 .container{ 
-  width: 390px;
+  width: 39.0rem;
   margin:0 auto; 
 }
 
 #brand{
-  width: 160px;
-  height: 48px;  
+  width: 16.0rem;
+  height: 4.8rem;  
   display: flex;
   align-items: center;
-  padding: 12px 20px;
-  border-radius: 0px 0px 12px 0px;
+  padding: 1.2rem 2.0rem;
+  border-radius: 0px 0px 1.2rem 0px;
   background: #2E2C30;
-  margin-bottom: 10px;
+  margin-bottom: 1.0rem;
   position: absolute;
   top: 0;
   left: 0;  
@@ -44,40 +44,73 @@ body {
 #text-brand{
   color: #9282FA;
   font-family: "Familjen Grotesk",sans-serif;
-  font-size: 16px;  
+  font-size: 1.6rem;  
   font-weight: 700;
-  line-height: 24px; 
+  line-height: 2.4rem; 
   text-transform: uppercase;
 }
 
+header > .title > h1 {
+  color:  #FFF;
+  font-family: "Inter Tight", sans-serif;
+  font-size: 2.4rem; 
+  font-weight: 700;
+  line-height: 3.2rem; /* 133.333% */
+}
+
+header > .title > p {
+  color:  #98959D;
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem; 
+  font-weight: 500;
+  line-height: 2.4rem; /* 171.429% */
+} 
+
+.schedule-period > header > span{
+  color:  #98959D;
+  text-align: right;
+  font-family: "Inter Tight", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 2.4rem; /* 150% */
+}
+
 .schedule{
-  margin-top: 69px;
+  margin-top: 6.9rem;
+}
+
+#schedule-date{
+  color: #98959D;
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
 }
 
 #title > h1{
   color: #F5F4F5; 
   font-family: "Inter Tight",sans-serif;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 700;
-  line-height: 32px;
+  line-height: 3.2rem;
 }
 
 #title p{
   color: #98959D;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 500;
-  line-height: 24px; 
+  line-height: 2.4rem; 
 }
 
 .input {
-  width: 183px;
-  height: 48px;
-  border: 1px solid #3e3c41;
-  padding:12px;
+  width: 18.3rem;
+  height: 4.8rem;
+  border: .1rem solid #3e3c41;
+  padding:1.2rem;
   border-radius: 0.5rem;
   display: flex;
-  margin-top: 12px;
-  margin-bottom: 32px;
+  margin-top: 1.2rem;
+  margin-bottom: 3.2rem;
 }
 
 .input i {
@@ -98,21 +131,22 @@ option{
 }
 
 .input:focus-within {
-  border: 1.5px solid #9282FA;
+  border: .15rem solid #9282FA;
 }
 
 ::-webkit-calendar-picker-indicator {
   cursor: pointer;
   background: url("./assets/arrow-down.svg") no-repeat;
+  background-size: 1.3rem;  
 }
 
 main{ 
-  margin-top: 21px; 
-  padding: 12px 20px;  
+  margin-top: 2.1rem; 
+  padding: 1.2rem 2.0rem;  
 }
 
 main > header{
-  margin-bottom: 32px;
+  margin-bottom: 3.2rem;
 }
 
 .period-header{
@@ -121,40 +155,40 @@ main > header{
 }
 
 .period-header > img {
-  margin-right: 12px;
+  margin-right: 1.2rem;
 } 
 
 li{  
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  padding: 12px;
+  padding: 1.2rem;
 }
 
 strong{
-  margin-right: 12px;
+  margin-right: 1.2rem;
 }
 
 .service{
   color: #98959D;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 500;
-  line-height: 24px; 
+  line-height: 2.4rem; 
 }
 
 .period > li .owner-name{
   color:  #98959D; 
-  font-family: Inter;
-  font-size: 12px; 
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem; 
   font-weight: 400;
-  line-height: 16px;
+  line-height: 1.6rem;
 }
 
 .schedule-period > header{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 12px 20px;
+  padding: 1.2rem 2.0rem;
   border-bottom: 1px solid #2E2C30;
 }
 
@@ -162,16 +196,16 @@ strong{
   width: 100%; 
   display: flex;
   flex-direction: column;
-  gap:12px; 
+  gap:1.2rem; 
 }
 
 section{
   background-color:#353339;
-  border-radius: 8px;
+  border-radius: .8rem;
 }
 
 .period{
-  padding: 20px;
+  padding: 2.0rem;
 }
 
 .first-line{
@@ -183,40 +217,46 @@ section{
   display: flex;
   justify-content: end;
   color: #666;
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 400;
-  line-height: 16px;
+  line-height: 1.6rem;
   cursor: pointer; 
 }
 
 .new-schedule{
   width: 100%;
-  padding: 18px 20px;
+  padding: 1.8rem 2.0rem;
   border: 1px solid #23242C;
   background: #23242C; 
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 56px; 
+  margin-top: 5.6rem; 
 }
 
 button{
-  padding: 12px 24px;
+  padding: 1.2rem 2.4rem;
   display: flex;
-  height: 48px;
-  padding: 12px 24px;
+  height: 4.8rem;
+  padding: 1.2rem 2.4rem;
   justify-content: center;
   align-items: center;  
-  border-radius: 8px;
+  border-radius: .8rem;
   background: #9282FA;
-  box-shadow: 0px 0px 40px 0px rgba(146, 130, 250, 0.30);
+  box-shadow: 0px 0px 4.0rem 0px rgba(146, 130, 250, 0.30);
   color: #050505;
-  font-family: "Inter Tight";
-  font-size: 16px;
+  font-family: "Inter Tight",sans-serif;
+  font-size: 1.6rem;
   font-weight: 700;
-  line-height: 24px;
-  border: none; 
+  line-height: 2.4rem;
+  border: none;
+  cursor: pointer; 
 }
+
+button:hover{
+  filter: brightness(0.9);
+}
+
 
 /* modal mobile */
 .modal-wrapper  {
@@ -236,7 +276,7 @@ button{
   padding: 2rem;
   opacity:0;
   visibility: hidden;
-  padding-top: 180px;
+  padding-top: 18.0rem;
 }
 
 select{
@@ -255,45 +295,52 @@ select{
 }
 
 .modal-form{
-  width: 350px;
+  width: 35.0rem;
   position: relative;
-  border-radius: 12px;
+  border-radius: 1.2rem;
   background: #23242C;
 }
 
 form{
   display: flex; 
-  padding:20px 20px 40px;
+  padding:2.0rem 2.0rem 4.0rem;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 16px;
+  gap: 1.6rem;
+}
+#form-date{
+  color:  #98959D;
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
 }
 
 #modal-header h1{
   color: #FFF;  
   font-family: "Inter Tight";
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 700;
-  line-height: 32px;
-  margin-top: 30px;
+  line-height: 3.2rem;
+  margin-top: 3.0rem;
   
 }
 
 #modal-header p{
   color: #98959D;  
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 500;
-  line-height: 24px; 
+  line-height: 2.4rem; 
 }
 
 form .input {
   width:100%;
-  height: 48px;
+  height: 4.8rem;
   margin-top: 0;
   margin-bottom: 0;
   border: 1px solid #3e3c41;
-  padding:12px;
+  padding:1.2rem;
   border-radius: 0.5rem;
   display: flex;
 }
@@ -307,19 +354,27 @@ input[type="time"] {
   cursor: pointer;
 }
 
+#time{
+  color: #98959D;
+  font-family: "Inter",sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+
 .textarea:focus{
   border: 1.5px solid #9282FA;
 }
 
 textarea {
-  width:310px;
-  height: 80px; 
+  width:31.0rem;
+  height: 8.0rem; 
   font-size: 1rem;
   color: #b2afb6;
   background-color: transparent;
   border-radius: 0.5rem;
   border: 1px solid #3e3c41;
-  padding: 12px; 
+  padding: 1.2rem; 
   outline: 0;
 }
 
@@ -328,36 +383,36 @@ textarea:focus{
 }
 
 #modal-header{ 
-  padding: 12px 20px; 
+  padding: 1.2rem 2.0rem; 
 }
 
 #wrapper-button{
-  width:310px;
+  width:31.0rem;
   display: flex;
   justify-content: flex-end;
 }
 
 #flex{
-  width:310px;
+  width:31.0rem;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1.6rem;
 }
 
 .flex-1{
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1.0rem;
 }
 
 #schedule-button{
   display: flex; 
-  height: 48px;
-  padding: 12px 24px;
+  height: 4.8rem;
+  padding: 1.2rem 2.4rem;
   justify-content: center;
   align-items: center;
-  gap: 8px;
-  border-radius: 8px;
+  gap: .8rem;
+  border-radius: .8rem;
   background: #9282FA;
   border: none;
 }
@@ -366,8 +421,8 @@ textarea:focus{
   background-color: transparent;
   border: 0;
   position: absolute;
-  top:8px;
-  right:8px;
+  top:.8rem;
+  right:.8rem;
   cursor: pointer;
   color: #98959D;
 }
@@ -383,18 +438,34 @@ select option:disabled {
 }
 
 .slash {
-  margin: 0 4px;
+  margin: 0 .4rem;
   color: #98959D; /* cinza igual ao dono */
+}
+
+.new-schedule > button {
+  border-radius: .8rem;
+  background:  #9282FA;
+  box-shadow: 0 0 4.0rem 0 rgba(146, 130, 250, 0.30);
+  display: inline-flex;
+  height: 4.8rem;
+  padding: 1.2rem 2.4rem;
+  justify-content: center;
+  align-items: center;
+  gap: .8rem; 
+  color: #050505;
+  text-align: center;
+  font-family: "Inter Tight",sans-serif;
+  font-size: 1.6rem;  
+  font-weight: 700;
+  line-height: 2.4rem; /* 150% */
 }
 
 
 
-
-
-@media (min-width: 1100px) {
+@media (min-width: 110.0rem) {
   .container{ 
-    width:711px;
-    margin:62px auto;
+    width:71.1rem;
+    margin:6.2rem auto;
   }
 
   #brand{
@@ -410,41 +481,41 @@ select option:disabled {
   } 
 
   .new-schedule{
-    width: 231.75px;
+    width: 23.175rem;
     padding: 0px 0px;
     margin-top: 0;   
     background: #14151D;
     position: relative;
-    bottom:20px;
-    right:-850px;  
+    bottom:2.0rem;
+    right:-85.0rem;  
   }
 
   li{  
     display: grid;
-    grid-template-columns:250px 1fr 1fr;
+    grid-template-columns:25.0rem 1fr 1fr;
     grid-template-rows: 1fr;
-    padding:20px;
+    padding:2.0rem;
   }
 
 
   /* modal desktop */
   .modal-wrapper{
-    padding: 40px;    
+    padding: 4.0rem;    
   }
 
   #modal-header{
-    margin-bottom: 28px;
+    margin-bottom: 2.8rem;
   }
 
   #flex{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 397px;
+    width: 39.7rem;
   }
 
   #flex .flex-1 .input{
-    width:191px;
+    width:19.1rem;
   }
 
   select{     
@@ -452,26 +523,26 @@ select option:disabled {
   }
 
   #time{
-    width:191px;
+    width:19.1rem;
   }
 
   #date{
-    width:191px;
+    width:19.1rem;
   } 
 
   .modal-form{    
-    width: 477px;  
-    padding: 40px;  
+    width: 47.7rem;  
+    padding: 4.0rem;  
   }
 
   form textarea {
-    width: 356px;
+    width: 35.6rem;
   }
 
   .flex-1{   
     display: flex;
     flex-direction: column;
-    gap:16px ;  
+    gap:1.6rem ;  
   }
 
   #close{
@@ -491,11 +562,11 @@ select option:disabled {
   }
 
   #service-description{
-    width: 397px;
+    width: 39.7rem;
   }
-  
+
   #wrapper-button{
-    width: 397px;
+    width: 39.7rem;
     
   }
   
