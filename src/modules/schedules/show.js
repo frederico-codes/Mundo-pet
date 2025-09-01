@@ -20,6 +20,7 @@ export function schedulesShow({ dailySchedules }){
       firstLine.classList.add("first-line")
       
       const time = document.createElement("strong")
+      time.classList.add("time")
       time.textContent = dayjs(schedule.when).format("HH:mm")
       
       const petName = document.createElement("span")

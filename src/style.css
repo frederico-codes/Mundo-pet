@@ -66,15 +66,6 @@ header > .title > p {
   line-height: 2.4rem; /* 171.429% */
 } 
 
-.schedule-period > header > span{
-  color:  #98959D;
-  text-align: right;
-  font-family: "Inter Tight", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  line-height: 2.4rem; /* 150% */
-}
-
 .schedule{
   margin-top: 6.9rem;
 }
@@ -117,13 +108,15 @@ header > .title > p {
   margin-right: 0.5rem;
 }
 
-.input input {
-  flex: 1;  
-  font-size: 1rem;
-  color: #b2afb6;
+.input input {   
   background-color: transparent;
   outline: none;
   border: none;
+  color: var(--content-secondary, #98959D);
+  font-family: "Inter",sans-serif;
+  font-size: 1.6rem;  
+  font-weight: 400;
+  line-height: 150%; /* 24px */
 }
 
 option{
@@ -136,7 +129,7 @@ option{
 
 ::-webkit-calendar-picker-indicator {
   cursor: pointer;
-  background: url("./assets/arrow-down.svg") no-repeat;
+  background: url("./assets/arrow-down.svg") no-repeat right center;
   background-size: 1.3rem;  
 }
 
@@ -163,6 +156,9 @@ li{
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   padding: 1.2rem;
+
+ 
+  align-items: center;  
 }
 
 strong{
@@ -174,14 +170,6 @@ strong{
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 2.4rem; 
-}
-
-.period > li .owner-name{
-  color:  #98959D; 
-  font-family: "Inter", sans-serif;
-  font-size: 1.2rem; 
-  font-weight: 400;
-  line-height: 1.6rem;
 }
 
 .schedule-period > header{
@@ -284,7 +272,7 @@ select{
   background-color: transparent;
   color: #FFF;
   flex: 1;
-  background: url("./assets/arrow-down.svg") no-repeat;
+  background: url("./assets/arrow-down.svg") no-repeat center center;
   background-position: calc(100% - .23rem) center;
   background-size: 1.3rem;
   padding-right: 2rem; 
@@ -309,22 +297,23 @@ form{
   align-items: flex-start;
   gap: 1.6rem;
 }
+
 #form-date{
   color:  #98959D;
   font-family: "Inter", sans-serif;
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 150%; /* 24px */
+
 }
 
 #modal-header h1{
   color: #FFF;  
-  font-family: "Inter Tight";
+  font-family: "Inter Tight",sans-serif;
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 3.2rem;
-  margin-top: 3.0rem;
-  
+  margin-top: 3.0rem;  
 }
 
 #modal-header p{
@@ -343,7 +332,30 @@ form .input {
   padding:1.2rem;
   border-radius: 0.5rem;
   display: flex;
+  align-items:center;
+  gap:.8rem;   
 }
+
+/* o input de data ocupa o container, mas deixa espaço p/ a seta */
+.input input[type="date"]{
+  flex:1;
+  height:100%;
+  background: transparent;
+  border:0;
+  outline:0;
+  color: var(--content-secondary, #98959D);
+  font: 400 1.6rem/150% "Inter", sans-serif;
+  padding-right:0rem;        /* espaço para a seta da direita */
+}
+
+/* seta do picker (Chrome/Edge/Safari) */
+.input input[type="date"]::-webkit-calendar-picker-indicator{
+  cursor:pointer;
+  background: url("./assets/arrow-down.svg") no-repeat center center;
+  background-size: 1.3rem;      /* dimensiona a seta */
+  padding: .8rem;               /* ajuda no clique e centraliza verticalmente */
+}
+
 
 input[type="time"] {
   appearance: none;
@@ -459,6 +471,81 @@ select option:disabled {
   font-weight: 700;
   line-height: 2.4rem; /* 150% */
 }
+
+#service-description{
+  color: var(--content-secondary, #98959D);
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+
+label{
+  color: var(--content-primary, #FFF);  
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;  
+  font-weight: 700;
+  line-height: 2.4rem; /* 171.429% */
+}
+
+.turn{
+  color: var(--content-primary, #FFF);  
+  font-family: "Inter Tight", sans-serif;
+  font-size: 1.6rem;  
+  font-weight: 700;
+  line-height: 2.4rem; /* 150% */
+}
+
+.interval{
+  color: var(--content-secondary, #98959D);
+  text-align: right;  
+  font-family: "Inter Tight", sans-serif;
+  font-size: 1.6rem;  
+  font-weight: 700;
+  line-height: 2.4rem; /* 150% */
+}
+
+.time{
+  color: var(--content-primary, #FFF);  
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;  
+  font-weight: 700;
+  line-height: 24px; /* 171.429% */
+}
+
+.pet-name{
+  color: var(--content-primary, #FFF); 
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;  
+  font-weight: 600;
+  line-height: 1.6rem; /* 133.333% */
+}
+
+.owner-name{
+  color: var(--content-secondary, #98959D);  
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;  
+  font-weight: 400;
+  line-height: 1.6rem; /* 133.333% */
+}
+
+.service{
+  color: var(--content-secondary, #98959D);
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6rem; /* 133.333% */
+}
+
+.remove{
+  color: var(--content-tertiary, #666);
+  text-align: center;  
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;  
+  font-weight: 400;
+  line-height: 1.6rem; /* 133.333% */
+}
+
 
 
 
